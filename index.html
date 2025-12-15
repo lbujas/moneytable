@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MoneyTable – SVG Cash Table Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #f6f6f6;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-weight: 400;
+            color: #555;
+            margin-bottom: 40px;
+        }
+        .buttons {
+            margin: 40px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 16px 28px;
+            margin: 10px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+        .btn-download {
+            background: #2d7ff9;
+            color: white;
+        }
+        .btn-buy {
+            background: #111;
+            color: white;
+        }
+        .features {
+            margin-top: 60px;
+            text-align: left;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .feature {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        footer {
+            margin-top: 80px;
+            color: #888;
+            font-size: 14px;
+        }
+        @media (max-width: 700px) {
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h1>MoneyTable</h1>
+    <h2>Simple SVG cash table generator for laser & print</h2>
+
+    <div class="buttons">
+        <a class="btn btn-download" href="#">
+            Download (Free Trial)
+        </a>
+
+        <a class="btn btn-buy" href="https://gumroad.com/" target="_blank">
+            Buy License
+        </a>
+    </div>
+
+    <div class="features">
+        <div class="feature">
+            <strong>SVG output</strong><br>
+            Perfect for laser cutting, CNC and print.
+        </div>
+        <div class="feature">
+            <strong>Multiple currencies</strong><br>
+            PLN, EUR, USD supported.
+        </div>
+        <div class="feature">
+            <strong>Custom layouts</strong><br>
+            Different table sizes and denominations.
+        </div>
+        <div class="feature">
+            <strong>Offline desktop app</strong><br>
+            No cloud. No tracking.
+        </div>
+    </div>
+
+    <footer>
+        © 2025 MoneyTable
+    </footer>
+</div>
+</body>
+</html>
