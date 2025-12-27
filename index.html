@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -75,15 +73,8 @@
             box-shadow: 0 12px 30px rgba(0,0,0,0.15);
         }
 
-        .btn-download {
-            background: #2d7ff9;
-            color: #fff;
-        }
-
-        .btn-buy {
-            background: #111;
-            color: #fff;
-        }
+        .btn-download { background: #2d7ff9; color: #fff; }
+        .btn-buy { background: #111; color: #fff; }
 
         .subtext {
             font-size: 14px;
@@ -108,9 +99,7 @@
             align-items: flex-start;
         }
 
-        .feature .icon {
-            font-size: 28px;
-        }
+        .feature .icon { font-size: 28px; }
 
         footer {
             margin-top: 100px;
@@ -119,13 +108,8 @@
         }
 
         @media (max-width: 760px) {
-            h1 {
-                font-size: 40px;
-            }
-
-            .features {
-                grid-template-columns: 1fr;
-            }
+            h1 { font-size: 40px; }
+            .features { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -144,14 +128,13 @@
         <span class="badge">💾 100% Offline</span>
         <span class="badge">🧾 SVG Export</span>
         <span class="badge">💰 PLN / EUR / USD</span>
-        <span class="badge">🪟 Windows 10 / 11</span>
+        <span class="badge">🪟 Windows & 🍎 macOS</span>
         <span class="badge">🔑 One-time purchase</span>
     </div>
 
     <div class="buttons">
-        <a class="btn btn-download"
-           href="https://github.com/lbujas/moneytable/releases/download/v1.0.0/MoneyTable_Windows.zip">
-            🪟 Download Free Trial
+        <a id="downloadBtn" class="btn btn-download" href="#">
+            Download
         </a>
 
         <a class="btn btn-buy"
@@ -161,7 +144,7 @@
         </a>
     </div>
 
-    <div class="subtext">
+    <div class="subtext" id="downloadNote">
         No installation · No tracking · Works offline after activation
     </div>
 
@@ -204,6 +187,29 @@
     </footer>
 
 </div>
+
+<script>
+(function () {
+    const ua = navigator.userAgent.toLowerCase();
+    const btn = document.getElementById("downloadBtn");
+    const note = document.getElementById("downloadNote");
+
+    if (ua.includes("win")) {
+        btn.href = "https://github.com/lbujas/moneytable/releases/download/v1.0.0/MoneyTable_Windows.zip";
+        btn.textContent = "🪟 Download for Windows";
+    }
+    else if (ua.includes("mac")) {
+        btn.href = "https://github.com/lbujas/moneytable/releases/download/v1.0.0/MoneyTable_macOS.zip";
+        btn.textContent = "🍎 Download for macOS";
+        note.textContent = "macOS: first launch → right-click the app → Open (Gatekeeper)";
+    }
+    else {
+        btn.href = "https://github.com/lbujas/moneytable/releases/tag/v1.0.0";
+        btn.textContent = "Download from GitHub";
+    }
+})();
+</script>
+
 </body>
 </html>
 
