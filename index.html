@@ -73,8 +73,9 @@
             box-shadow: 0 12px 30px rgba(0,0,0,0.15);
         }
 
-        .btn-download { background: #2d7ff9; color: #fff; }
-        .btn-buy { background: #111; color: #fff; }
+        .btn-windows { background: #2d7ff9; color: #fff; }
+        .btn-macos   { background: #555; color: #fff; }
+        .btn-buy     { background: #111; color: #fff; }
 
         .subtext {
             font-size: 14px;
@@ -133,8 +134,14 @@
     </div>
 
     <div class="buttons">
-        <a id="downloadBtn" class="btn btn-download" href="#">
-            Download
+        <a class="btn btn-windows"
+           href="https://github.com/lbujas/moneytable/releases/download/v1.0.0/MoneyTable_Windows.zip">
+            🪟 Download for Windows
+        </a>
+
+        <a class="btn btn-macos"
+           href="https://github.com/lbujas/moneytable/releases/download/v1.0.0/MoneyTable_macOS.zip">
+            🍎 Download for macOS
         </a>
 
         <a class="btn btn-buy"
@@ -144,7 +151,8 @@
         </a>
     </div>
 
-    <div class="subtext" id="downloadNote">
+    <div class="subtext">
+        macOS: first launch → right-click the app → Open (Gatekeeper)<br>
         No installation · No tracking · Works offline after activation
     </div>
 
@@ -187,29 +195,7 @@
     </footer>
 
 </div>
-
-<script>
-(function () {
-    const ua = navigator.userAgent.toLowerCase();
-    const btn = document.getElementById("downloadBtn");
-    const note = document.getElementById("downloadNote");
-
-    if (ua.includes("win")) {
-        btn.href = "https://github.com/lbujas/moneytable/releases/download/v1.0.0/MoneyTable_Windows.zip";
-        btn.textContent = "🪟 Download for Windows";
-    }
-    else if (ua.includes("mac")) {
-        btn.href = "https://github.com/lbujas/moneytable/releases/download/v1.0.0/MoneyTable_macOS.zip";
-        btn.textContent = "🍎 Download for macOS";
-        note.textContent = "macOS: first launch → right-click the app → Open (Gatekeeper)";
-    }
-    else {
-        btn.href = "https://github.com/lbujas/moneytable/releases/tag/v1.0.0";
-        btn.textContent = "Download from GitHub";
-    }
-})();
-</script>
-
 </body>
 </html>
+
 
