@@ -1,6 +1,9 @@
-# moneytable
+# MoneyTable
 
-MoneyTable – simple SVG cash table generator.
+Simple SVG cash table generator.
 
-## Demo
-https://lbujas.github.io/moneytable/
+## Demo / Download
+👉 https://lbujas.github.io/moneytable/
+
+## Output
+- SVG (printable)
